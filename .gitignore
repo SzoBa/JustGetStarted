@@ -1,0 +1,7 @@
+.vscode/*
+__pycahe__/
+*.pyc
+temp/*
+*.tmp
+venv/
+.idea/*
