@@ -1,45 +1,34 @@
 initGame();
 
-function initGame() {
-    document.getElementById('bird').style.top = '30%';
-    document.addEventListener('keypress', birdMove);
+let gravityObject = {
+    gravity: 0.05,
+    gravitySpeed: 0
 }
 
+function initGame() {
+    document.getElementById('bird').style.top = '30%';
+    // document.addEventListener('keypress', birdMove);
+    gravity();
+}
 
-function gravity(stopTimer=false) {
+function gravity() {
     let pos = document.getElementById('bird');
-    let velocity = 0.01;
-    let speed = 0.02;
     let timer = setInterval(function () {
-       let y_position = parseFloat(pos.style.top);
-        if (stopTimer) {
-            speed = -1;
-            velocity = 0;
-        }
-        velocity = velocity + 0.002;
-        speed = speed + velocity;
-        y_position = y_position + speed;
-        pos.style.top = y_position + '%';
+    let y_position = parseFloat(pos.style.top);
         if (pos.style.top >= '91%') {
             pos.style.top = '93%';
-            clearInterval(timer); //lose
+            gravityObject.gravitySpeed = 0;
         }
-        if (pos.style.top <= '0%') {
+        if (pos.style.top <= '1%') {
             pos.style.top = '0%';
-            clearInterval(timer);
+            gravityObject.gravitySpeed = 0;
         }
+        gravityObject.gravitySpeed = gravityObject.gravitySpeed + gravityObject.gravity;
+        y_position = y_position + gravityObject.gravitySpeed;
+        pos.style.top = y_position + '%';
     }, 40);
 }
 
-
-
-function birdMove(event) {
-    let stopTimer = false;
-    if (event.code === 'Space') {
-        event.preventDefault();
-        stopTimer = true;
-
-    }
-    gravity(stopTimer);
+function accelerate(n) {
+    gravityObject.gravity = n;
 }
-
