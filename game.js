@@ -6,17 +6,19 @@ function initGame() {
 
 }
 
-
 function gravity() {
-    let speed = 5;
-    let y_pos = 0;
     let pos = document.getElementById('bird');
+    let y_position = 30;
+    let velocity = 0.01;
+    let speed = 0.02;
     let timer = setInterval(function () {
-        if (pos.style.top === '93%') {
+        if (pos.style.top >= '91%') {
             clearInterval(timer);
         } else {
-            speed++;
-            pos.style.top = speed + '%';
+            velocity = velocity + 0.002;
+            speed = speed + velocity;
+            y_position = y_position + speed;
+            pos.style.top = y_position + '%';
         }
-    }, 50);
+    }, 40);
 }
