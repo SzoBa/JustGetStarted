@@ -1,0 +1,20 @@
+#container {
+    margin: 5% auto;
+    background-color: darkcyan;
+    width: 40vw;
+    height: 70vh;
+
+}
+
+
+#bird {
+    position: absolute;
+    width: 2vw;
+    height: 5vh;
+    background-color: orangered;
+    z-index: 10;
+    margin-top: 20vh;
+    margin-left: 10vh;
+
+
+}
