@@ -18,9 +18,10 @@ function gravity() {
         if (pos.style.top >= '91%') {
             pos.style.top = '93%';
             gravityObject.gravitySpeed = 0;
+            clearInterval(timer);
         }
         if (pos.style.top <= '1%') {
-            pos.style.top = '0%';
+            pos.style.top = '1%';
             gravityObject.gravitySpeed = 0;
         }
         gravityObject.gravitySpeed = gravityObject.gravitySpeed + gravityObject.gravity;
