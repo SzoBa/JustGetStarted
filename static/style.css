@@ -1,9 +1,34 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1;
+    height: 100vh;
+    width: 100vw;
+    display: table;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: darkcyan;
+
+}
+
+
 #container {
-    margin: 5% auto;
+    margin: auto;
     background-color: darkcyan;
     width: 40vw;
     height: 70vh;
     position: relative;
+    background-image: url("flappyback.png");
+    background-size: contain;
+    border-radius: 5%;
 
 }
 
@@ -12,8 +37,54 @@
     position: absolute;
     width: 7%;
     height: 7%;
-    background-color: orangered;
-    z-index: 10;
-    /*margin-top: 20vh;*/
     margin-left: 10vh;
+    background-image: url("flappybird.png");
+    background-size: cover;
+}
+
+
+.birdUp {
+    transform: rotate(-20deg);
+}
+
+
+.birdDown {
+    transform: rotate(20deg);
+}
+
+.pipeNorth {
+    position: absolute;
+    animation: movePipeNorth 9s infinite;
+    background-image: url("pipeNorth.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 7%;
+    height: 21%;
+}
+
+.pipeSouth {
+    position: absolute;
+    animation: movePipeSouth 9s infinite;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 7%;
+    height: 21%;
+}
+
+
+
+
+@keyframes movePipeNorth {
+    from {top: 0%; left: 93%;}
+    to {top: 0%; left: -10%;}
+}
+
+
+@keyframes movePipeSouth {
+    from {top: 79%; left: 93%;}
+    to {top: 79%; left: -10%;}
+}
+
+.hidden {
+    visibility: hidden;
 }
