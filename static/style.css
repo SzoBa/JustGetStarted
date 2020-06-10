@@ -159,8 +159,21 @@ main {
     width: 40vw;
     height: 70vh;
     position: relative;
-    background-color: red;
+    background-color: lightcoral;
     border-radius: 5%;
     z-index: 1;
     text-align: center;
+    vertical-align: center;
+}
+
+#score {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    font-size: 2em;
+    z-index: 5;
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 black;
+    font-family: "Press Start 2P", "Press Start 2P", cursive;
 }

@@ -2,7 +2,8 @@ initGame();
 
 let generalObject = {
     velocity: 0.05,
-    speed: 0
+    speed: 0,
+    points: 0
 }
 
 
@@ -22,7 +23,6 @@ function gravity() {
             actualBird.style.top = '93%';
             generalObject.speed = 0;
             lose();
-            clearInterval(timer);
         }
         if (actualBird.style.top <= '1%') {
             actualBird.style.top = '1%';
@@ -46,7 +46,8 @@ function accelerate(n) {
     generalObject.velocity = n;
 }
 
-function birdUp() {
+function birdUp(event) {
+    event.preventDefault();
     accelerate(-0.2);
     let bird = document.getElementById('bird');
     bird.classList.remove('birdDown');
@@ -54,7 +55,8 @@ function birdUp() {
 }
 
 
-function birdDown() {
+function birdDown(event) {
+    event.preventDefault();
     accelerate(0.05);
     let bird = document.getElementById('bird');
     bird.classList.remove('birdUp');
@@ -67,8 +69,10 @@ function pipeCheck() {
     for (let pipe of pipes) {
         if (pipe.getBoundingClientRect().x < gameArea.getBoundingClientRect().x) {
             pipe.classList.add('hidden');
+            increaseScore();
         } else if (pipe.classList.contains('hidden')) {
             pipe.classList.remove('hidden');
+
         }
     }
 }
@@ -128,4 +132,12 @@ function lose() {
     loseScreen.classList.add('loseScreen');
     document.getElementById('container').remove();
     document.getElementsByTagName('main')[0].appendChild(loseScreen);
+}
+
+
+function increaseScore() {
+    let score = generalObject.points;
+    score++;
+    generalObject.points = score;
+    document.getElementById('score').innerHTML = score;
 }
