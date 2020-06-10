@@ -55,10 +55,10 @@ main {
 .pipeNorth {
     position: absolute;
     animation: movePipeNorth 9s infinite;
-    background-image: url("pipeNorth.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    width: 7%;
+    background-image: url("pipeSouth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
     height: 21%;
 }
 
@@ -67,7 +67,7 @@ main {
     animation: movePipeSouth 9s infinite;
     background-image: url("pipeSouth.png");
     background-size: cover;
-    width: 7%;
+    width: 10%;
     height: 21%;
 }
 
@@ -75,13 +75,13 @@ main {
 
 
 @keyframes movePipeNorth {
-    from {top: 0%; left: 93%;}
+    from {top: 0%; left: 90%;}
     to {top: 0%; left: -10%;}
 }
 
 
 @keyframes movePipeSouth {
-    from {top: 79%; left: 93%;}
+    from {top: 79%; left: 90%;}
     to {top: 79%; left: -10%;}
 }
 
