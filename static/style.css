@@ -16,9 +16,7 @@ main {
     display: table-cell;
     vertical-align: middle;
     background-color: darkcyan;
-
 }
-
 
 #container {
     margin: auto;
@@ -29,9 +27,7 @@ main {
     background-image: url("flappyback.png");
     background-size: contain;
     border-radius: 5%;
-
 }
-
 
 #bird {
     position: absolute;
@@ -42,11 +38,9 @@ main {
     background-size: cover;
 }
 
-
 .birdUp {
     transform: rotate(-20deg);
 }
-
 
 .birdDown {
     transform: rotate(20deg);
@@ -55,7 +49,7 @@ main {
 .pipeNorth {
     position: absolute;
     animation: movePipeNorth 9s infinite;
-    background-image: url("pipeSouth.png");
+    background-image: url("pipeNorth.png");
     transform: rotate(180deg);
     background-size: cover;
     width: 10%;
@@ -70,8 +64,6 @@ main {
     width: 10%;
     height: 21%;
 }
-
-
 
 
 @keyframes movePipeNorth {
