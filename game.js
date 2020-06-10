@@ -111,7 +111,7 @@ function collisionDetection() {
     for (let pipe of pipes) {
         let pipePosition = pipe.getBoundingClientRect();
         if (pipe.id.includes('North')) {
-            if (birdPositions.right >= pipePosition.x && (birdPositions.bottom < pipePosition.bottom) && birdPositions.x < pipePosition.right) {
+            if (birdPositions.right >= pipePosition.x && (birdPositions.top < pipePosition.bottom) && birdPositions.x < pipePosition.right) {
                 lose();
             }
         } else if (pipe.id.includes('South')){
