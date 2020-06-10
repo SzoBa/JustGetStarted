@@ -16,6 +16,7 @@ main {
     display: table-cell;
     vertical-align: middle;
     background-color: darkcyan;
+    z-index: -1;
 }
 
 #container {
@@ -31,11 +32,11 @@ main {
 
 #bird {
     position: absolute;
-    width: 7%;
+    width: 7.5%;
     height: 7%;
     margin-left: 10vh;
     background-image: url("flappybird.png");
-    background-size: contain;
+    background-size: cover;
 }
 
 .birdUp {
@@ -46,7 +47,45 @@ main {
     transform: rotate(20deg);
 }
 
-.pipeNorth {
+/*.pipeNorth {*/
+/*    position: absolute;*/
+/*    animation: movePipeNorth 9s infinite;*/
+/*    background-image: url("pipeNorth.png");*/
+/*    transform: rotate(180deg);*/
+/*    background-size: cover;*/
+/*    width: 10%;*/
+/*}*/
+
+/*.pipeSouth {*/
+/*    position: absolute;*/
+/*    animation: movePipeSouth 9s infinite;*/
+/*    background-image: url("pipeSouth.png");*/
+/*    background-size: cover;*/
+/*    width: 10%;*/
+/*}*/
+
+#pipeNorth3 {
+    position: absolute;
+    animation: movePipeNorth 9s infinite;
+    background-image: url("pipeNorth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
+    height: 35%;
+}
+
+#pipeSouth3 {
+    height: 35%;
+    position: absolute;
+    animation: movePipeSouth3 9s infinite;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 10%;
+}
+
+
+
+#pipeNorth2 {
     position: absolute;
     animation: movePipeNorth 9s infinite;
     background-image: url("pipeNorth.png");
@@ -56,27 +95,71 @@ main {
     height: 21%;
 }
 
-.pipeSouth {
+#pipeSouth2 {
+    height: 45%;
     position: absolute;
-    animation: movePipeSouth 9s infinite;
+    animation: movePipeSouth2 9s infinite;
     background-image: url("pipeSouth.png");
     background-size: cover;
     width: 10%;
+}
+
+
+
+#pipeNorth1 {
+    position: absolute;
+    animation: movePipeNorth 9s infinite;
+    background-image: url("pipeNorth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
+    height: 45%;
+}
+
+#pipeSouth1 {
     height: 21%;
+    position: absolute;
+    animation: movePipeSouth1 9s infinite;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 10%;
 }
 
 
 @keyframes movePipeNorth {
     from {top: 0%; left: 90%;}
-    to {top: 0%; left: -10%;}
+    to {top: 0%; left: -35%;}
 }
 
 
-@keyframes movePipeSouth {
+@keyframes movePipeSouth3 {
+    from {top: 65%; left: 90%;}
+    to {top: 65%; left: -35%;}
+}
+
+@keyframes movePipeSouth2 {
+    from {top: 55%; left: 90%;}
+    to {top: 55%; left: -35%;}
+}
+
+@keyframes movePipeSouth1 {
     from {top: 79%; left: 90%;}
-    to {top: 79%; left: -10%;}
+    to {top: 79%; left: -35%;}
+
 }
+
 
 .hidden {
     visibility: hidden;
+}
+
+.loseScreen {
+    margin: auto;
+    width: 40vw;
+    height: 70vh;
+    position: relative;
+    background-color: red;
+    border-radius: 5%;
+    z-index: 1;
+    text-align: center;
 }
