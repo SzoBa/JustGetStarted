@@ -35,7 +35,7 @@ main {
     height: 7%;
     margin-left: 10vh;
     background-image: url("flappybird.png");
-    background-size: cover;
+    background-size: contain;
 }
 
 .birdUp {
