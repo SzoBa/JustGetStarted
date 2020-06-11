@@ -1,5 +1,3 @@
-initGame();
-
 let generalObject = {
     velocity: 0.05,
     speed: 0,
@@ -9,12 +7,16 @@ let generalObject = {
 
 
 function initGame() {
+    document.getElementById('startButton').remove();
+    document.getElementById('flapLabel').remove();
     document.getElementById('bird').style.top = '30%';
     document.addEventListener('mousedown', birdUp);
     document.addEventListener('mouseup', birdDown);
     gravity();
     pipeHandler();
 }
+
+
 
 function gravity() {
     let actualBird = document.getElementById('bird');
@@ -81,7 +83,8 @@ function pipeCheck() {
 }
 
 function pipeHandler() {
-    let pipePool = [['pipeNorth1', 'pipeSouth1'], ['pipeNorth2', 'pipeSouth2'], ['pipeNorth3', 'pipeSouth3']];
+    let pipePool = [['pipeNorth1', 'pipeSouth1'], ['pipeNorth2', 'pipeSouth2'], ['pipeNorth3', 'pipeSouth3'],
+                    ['pipeNorth4', 'pipeSouth4'], ['pipeNorth5', 'pipeSouth5']];
     let gameArea = document.getElementById('container');
     let pipeTimer = setInterval(function () {
         if (generalObject.collision) {
