@@ -12,6 +12,7 @@ body {
     height: 100vh;
     width: 100vw;
     display: table;
+    background-image: url("flappy-bird-wp5.png");
 }
 
 main {
@@ -19,7 +20,6 @@ main {
     width: 100vw;
     display: table-cell;
     vertical-align: middle;
-    background-color: darkcyan;
 }
 
 #container {
