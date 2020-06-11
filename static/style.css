@@ -1,3 +1,7 @@
+* {
+    font-family: "Press Start 2P", cursive;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -16,7 +20,6 @@ main {
     display: table-cell;
     vertical-align: middle;
     background-color: darkcyan;
-    z-index: -1;
 }
 
 #container {
@@ -36,8 +39,9 @@ main {
     height: 7%;
     margin-left: 10vh;
     background-image: url("flappybird.png");
-    background-size: contain;
-    border-radius: 40%;
+    background-size: contain; /* TODO: how it looks on other machines - border problem*/
+    background-repeat: no-repeat;
+    border-radius: 30%;
 }
 
 .birdUp {
@@ -48,26 +52,9 @@ main {
     transform: rotate(20deg);
 }
 
-/*.pipeNorth {*/
-/*    position: absolute;*/
-/*    animation: movePipeNorth 9s infinite;*/
-/*    background-image: url("pipeNorth.png");*/
-/*    transform: rotate(180deg);*/
-/*    background-size: cover;*/
-/*    width: 10%;*/
-/*}*/
-
-/*.pipeSouth {*/
-/*    position: absolute;*/
-/*    animation: movePipeSouth 9s infinite;*/
-/*    background-image: url("pipeSouth.png");*/
-/*    background-size: cover;*/
-/*    width: 10%;*/
-/*}*/
-
 #pipeNorth3 {
     position: absolute;
-    animation: movePipeNorth 9s infinite;
+    animation: movePipeNorth 6s linear 1;
     background-image: url("pipeNorth.png");
     transform: rotate(180deg);
     background-size: cover;
@@ -78,7 +65,7 @@ main {
 #pipeSouth3 {
     height: 35%;
     position: absolute;
-    animation: movePipeSouth3 9s infinite;
+    animation: movePipeSouth3 6s linear 1;
     background-image: url("pipeSouth.png");
     background-size: cover;
     width: 10%;
@@ -88,7 +75,7 @@ main {
 
 #pipeNorth2 {
     position: absolute;
-    animation: movePipeNorth 9s infinite;
+    animation: movePipeNorth 6s linear 1;
     background-image: url("pipeNorth.png");
     transform: rotate(180deg);
     background-size: cover;
@@ -99,7 +86,7 @@ main {
 #pipeSouth2 {
     height: 45%;
     position: absolute;
-    animation: movePipeSouth2 9s infinite;
+    animation: movePipeSouth2 6s linear 1;
     background-image: url("pipeSouth.png");
     background-size: cover;
     width: 10%;
@@ -109,7 +96,7 @@ main {
 
 #pipeNorth1 {
     position: absolute;
-    animation: movePipeNorth 9s infinite;
+    animation: movePipeNorth 6s linear 1;
     background-image: url("pipeNorth.png");
     transform: rotate(180deg);
     background-size: cover;
@@ -120,7 +107,7 @@ main {
 #pipeSouth1 {
     height: 21%;
     position: absolute;
-    animation: movePipeSouth1 9s infinite;
+    animation: movePipeSouth1 6s linear 1;
     background-image: url("pipeSouth.png");
     background-size: cover;
     width: 10%;
@@ -129,23 +116,23 @@ main {
 
 @keyframes movePipeNorth {
     from {top: 0%; left: 90%;}
-    to {top: 0%; left: -35%;}
+    to {top: 0%; left: 0%;}
 }
 
 
 @keyframes movePipeSouth3 {
     from {top: 65%; left: 90%;}
-    to {top: 65%; left: -35%;}
+    to {top: 65%; left: 0%;}
 }
 
 @keyframes movePipeSouth2 {
     from {top: 55%; left: 90%;}
-    to {top: 55%; left: -35%;}
+    to {top: 55%; left: 0%;}
 }
 
 @keyframes movePipeSouth1 {
     from {top: 79%; left: 90%;}
-    to {top: 79%; left: -35%;}
+    to {top: 79%; left: 0%;}
 
 }
 
@@ -161,19 +148,30 @@ main {
     position: relative;
     background-color: lightcoral;
     border-radius: 5%;
-    z-index: 1;
     text-align: center;
     vertical-align: center;
 }
 
 #score {
     margin: auto;
+    padding-top: 1%;
     text-align: center;
     position: relative;
     font-size: 2em;
-    z-index: 5;
     color: white;
     font-weight: 700;
     text-shadow: 2px 2px 0 black;
-    font-family: "Press Start 2P", "Press Start 2P", cursive;
+
+    z-index: 5;
+}
+
+
+#game-over {
+    position: relative;
+    color: darkorange;
+    text-shadow: 3px 3px white;
+    font-size: 3.5em;
+    text-align: center;
+    padding-top: 7%;
+    z-index: 100;
 }
