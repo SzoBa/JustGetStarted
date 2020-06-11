@@ -136,7 +136,12 @@ function lose() {
     let gameOver = document.createElement('div');
     gameOver.innerHTML = 'Game Over';
     gameOver.setAttribute('id', 'game-over');
+    let restartMessage = document.createElement('div');
+    restartMessage.innerHTML = 'Click to Restart';
+    restartMessage.setAttribute('id', 'restart-message');
     document.getElementById('container').appendChild(gameOver);
+    document.getElementById('container').appendChild(restartMessage);
+    document.getElementById('container').addEventListener('mousedown', restart);
 }
 
 
@@ -160,4 +165,10 @@ function automaticStop() {
             }
         }
     },20);
+}
+
+
+function restart() {
+    location.reload();
+
 }
