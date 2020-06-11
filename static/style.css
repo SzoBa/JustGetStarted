@@ -251,3 +251,13 @@ main {
 #here {
     color: rgba(209, 69, 43, 0.9);
 }
+
+#restart-message {
+    position: relative;
+    color: black;
+    text-shadow: 3px 3px white;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2%;
+    z-index: 100;
+}
