@@ -52,6 +52,45 @@ main {
     transform: rotate(20deg);
 }
 
+#pipeNorth5 {
+    position: absolute;
+    animation: movePipeNorth 6s linear 1;
+    background-image: url("pipeNorth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
+    height: 15%;
+}
+
+#pipeSouth5 {
+    height: 55%;
+    position: absolute;
+    animation: movePipeSouth5 6s linear 1;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 10%;
+}
+
+
+#pipeNorth4 {
+    position: absolute;
+    animation: movePipeNorth 6s linear 1;
+    background-image: url("pipeNorth.png");
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 10%;
+    height: 40%;
+}
+
+#pipeSouth4 {
+    height: 25%;
+    position: absolute;
+    animation: movePipeSouth4 6s linear 1;
+    background-image: url("pipeSouth.png");
+    background-size: cover;
+    width: 10%;
+}
+
 #pipeNorth3 {
     position: absolute;
     animation: movePipeNorth 6s linear 1;
@@ -114,11 +153,21 @@ main {
 }
 
 
+
 @keyframes movePipeNorth {
     from {top: 0%; left: 90%;}
     to {top: 0%; left: 0%;}
 }
 
+@keyframes movePipeSouth5 {
+    from {top: 45%; left: 90%;}
+    to {top: 45%; left: 0%;}
+}
+
+@keyframes movePipeSouth4 {
+    from {top: 75%; left: 90%;}
+    to {top: 75%; left: 0%;}
+}
 
 @keyframes movePipeSouth3 {
     from {top: 65%; left: 90%;}
@@ -174,4 +223,31 @@ main {
     text-align: center;
     padding-top: 7%;
     z-index: 100;
+}
+
+
+#startButton {
+    position: relative;
+    color: green;
+    text-shadow: 3px 3px white;
+    font-size: 3.5em;
+    text-align: center;
+    padding-top: 7%;
+    z-index: 100;
+
+}
+
+#flapLabel {
+    position: relative;
+    color: rgba(179, 115, 50, 0.9);
+    text-shadow: 3px 3px white;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2%;
+    z-index: 100;
+
+}
+
+#here {
+    color: rgba(209, 69, 43, 0.9);
 }
