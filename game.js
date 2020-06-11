@@ -75,7 +75,7 @@ function pipeCheck() {
     let gameArea = document.getElementById('container');
     let pipes = document.getElementsByClassName('pipe');
     for (let pipe of pipes) {
-        if (pipe.getBoundingClientRect().x <= (gameArea.getBoundingClientRect().x + 10)) {
+        if (pipe.getBoundingClientRect().x <= (gameArea.getBoundingClientRect().x + 12)) {
             pipe.remove();
             increaseScore();
         }
@@ -126,11 +126,6 @@ function collisionDetection() {
 }
 
 function lose() {
-    // let loseScreen = document.createElement('div');
-    // loseScreen.innerHTML = 'YOU LOST';
-    // loseScreen.classList.add('loseScreen');
-    // document.getElementById('container').remove();
-    // document.getElementsByTagName('main')[0].appendChild(loseScreen);
     document.removeEventListener('mousedown', birdUp);
     document.removeEventListener('mouseup', birdDown);
     let gameOver = document.createElement('div');
