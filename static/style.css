@@ -31,6 +31,7 @@ main {
     background-image: url("flappyback.png");
     background-size: contain;
     border-radius: 5%;
+    border: rgba(179, 115, 50, 0.9) 5px solid;
 }
 
 #bird {
