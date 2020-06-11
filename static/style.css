@@ -15,7 +15,6 @@ body {
     background-image: url("flappy-bird-wp8.png");
     background-repeat: no-repeat;
     background-size: cover;
-;
 }
 
 main {
@@ -43,7 +42,7 @@ main {
     height: 7%;
     margin-left: 10vh;
     background-image: url("flappybird.png");
-    background-size: contain; /* TODO: how it looks on other machines - border problem*/
+    background-size: contain;
     background-repeat: no-repeat;
     border-radius: 30%;
 }
@@ -74,7 +73,6 @@ main {
     background-size: cover;
     width: 10%;
 }
-
 
 #pipeNorth4 {
     position: absolute;
@@ -214,7 +212,6 @@ main {
     color: white;
     font-weight: 700;
     text-shadow: 2px 2px 0 black;
-
     z-index: 5;
 }
 
